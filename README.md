@@ -18,6 +18,7 @@ A web-based audio control application for Windows that lets you control volume, 
 - **Node.js** (v18 or higher)
 - **Windows 10/11**
 - **NirCmd** utility
+- **AudioDeviceCmdlets** PowerShell module
 
 ### Installation
 
@@ -28,17 +29,22 @@ A web-based audio control application for Windows that lets you control volume, 
    npm install
    ```
 
-2. **Configure**
+2. **Install AudioDeviceCmdlets**
+   ```powershell
+   Install-Module -Name AudioDeviceCmdlets -Force
+   ```
+
+3. **Configure**
    ```bash
    mv env.example .env
    # Edit .env with your device names
    ```
 
-3. **Add NirCmd**
+4. **Add NirCmd**
    - Download from https://www.nirsoft.net/utils/nircmd.html
    - Place `nircmd.exe` in project root
 
-4. **Start**
+5. **Start**
    ```bash
    npm start
    # Open http://localhost:5000
