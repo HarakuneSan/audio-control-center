@@ -624,6 +624,7 @@
 
                 const volume = await volumeResponse.text();
                 const muted = await muteResponse.text() === 'true';
+
                 
                 const volumeSlider = document.getElementById('volumeSlider');
                 const volumeDisplay = document.getElementById('volumeDisplay');
@@ -634,7 +635,7 @@
                     updateMuteButton();
                 }
                 
-                updateVolumeDisplay(volumeSlider, volumeDisplay);
+                updateVolumeDisplay(volumeSlider, volumeDisplay, volume);
             } catch (error) {
                 console.error('Error fetching audio state:', error);
             }
@@ -643,7 +644,7 @@
         /**
          * Update volume display based on user interaction state
          */
-        function updateVolumeDisplay(volumeSlider, volumeDisplay) {
+        function updateVolumeDisplay(volumeSlider, volumeDisplay, volume) {
             // Guard: Don't update if user is interacting
             if (userInteracting) {
                 updateVolumePlaceholder(volumeDisplay);
