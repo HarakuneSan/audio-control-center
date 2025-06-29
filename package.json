@@ -1,0 +1,43 @@
+{
+  "name": "audio-control-center",
+  "version": "1.0.0",
+  "description": "A modern web application for controlling Windows audio settings and media playback with real-time feedback and beautiful glassmorphism UI",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "test": "node test.js",
+    "lint": "echo 'No linter configured'",
+    "format": "echo 'No formatter configured'"
+  },
+  "keywords": [
+    "audio",
+    "volume-control",
+    "windows",
+    "media-control",
+    "spotify",
+    "glassmorphism",
+    "web-app",
+    "powershell",
+    "nircmd"
+  ],
+  "author": "HarakuneSan",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.18.0"
+  },
+  "dependencies": {
+    "dotenv": "^17.0.0",
+    "express": "^5.1.0",
+    "get-windows": "^9.2.0",
+    "path": "^0.12.7",
+    "url": "^0.11.4"
+  },
+  "os": [
+    "win32"
+  ],
+  "cpu": [
+    "x64"
+  ]
+}
